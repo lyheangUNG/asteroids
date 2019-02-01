@@ -21,5 +21,11 @@ Fraction::Fraction add(Fraction f)
 	return f1;
 }
 
+Fraction Fraction::div(Fraction b){
+    denominator = denominator*b.numerator;
+    numerator = numerator*b.denominator;
+    return this;
+}
+
 main(){
 }
