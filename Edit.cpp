@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -22,6 +22,24 @@ Fraction::Fraction add(Fraction f)
 	return f1;
 };
 
+Fraction Fraction::sub(Fraction b){
+    denominator = denominator * b.denominator;
+    numerator = (numerator*b.denominator) -  (b.numerator*denominator);
+    return this;
+}
+
+Fraction Fraction::mul(Fraction f) {
+    numerator = numerator * f.numerator;
+    denominator = denominator * f.denominator;
+
+    return f;
+}
+
+Fraction Fraction::div(Fraction b) {
+    denominator = denominator*b.numerator;
+    numerator = numerator*b.denominator;
+    return this;
+}
 
 int gcd(int a, int b) {
 	while (a != b) {
@@ -35,6 +53,7 @@ int gcd(int a, int b) {
 	return a;
 }
 
+int main() {
 
 Fraction Fraction::sub(Fraction b){
     denominator = denominator * b.denominator;
@@ -42,11 +61,3 @@ Fraction Fraction::sub(Fraction b){
     return this;
 }
 
-Fraction Fraction::div(Fraction b){
-    denominator = denominator*b.numerator;
-    numerator = numerator*b.denominator;
-    return this;
-}
-
-main(){
-}
