@@ -12,8 +12,21 @@ public:
     Fraction sub(Fraction);
     Fraction mul(Fraction);
     Fraction div(Fraction);
-
+    friend int gcd(int,int);
 };
+
+int gcd(int a, int b) {
+	while (a != b) {
+		if (a > b) {
+			a -= b;
+		}
+		else {
+			b -= a;
+		}
+	}
+	return a;
+}
+
 
 Fraction Fraction::sub(Fraction b){
     denominator = denominator * b.denominator;
