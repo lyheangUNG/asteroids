@@ -12,15 +12,21 @@ public:
     Fraction sub(Fraction);
     Fraction mul(Fraction);
     Fraction div(Fraction);
+
 };
 
 Fraction Fraction::mul(Fraction f){
-    Fraction f2;
 
-    f.numerator = f.numerator * f2.numerator;
-    f.denominator = f.denominator * f2.denominator;
+    numerator = numerator * f.numerator;
+    denominator = denominator * f.denominator;
 
     return f;
+}
+
+Fraction Fraction::sub(Fraction b) {
+    denominator = denominator * b.denominator;
+    numerator = (numerator*b.denominator) -  (b.numerator*denominator);
+    return this;
 }
 
 int main(){
