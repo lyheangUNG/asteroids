@@ -21,6 +21,12 @@ Fraction Fraction::sub(Fraction b){
     return this;
 }
 
+Fraction Fraction::div(Fraction b){
+    denominator = denominator*b.numerator;
+    numerator = numerator*b.denominator;
+    return this;
+}
+
 main(){
 
 }
