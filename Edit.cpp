@@ -15,20 +15,25 @@ public:
 
 };
 
-Fraction Fraction::mul(Fraction f){
-
-    numerator = numerator * f.numerator;
-    denominator = denominator * f.denominator;
-
-    return f;
-}
-
 Fraction Fraction::sub(Fraction b) {
     denominator = denominator * b.denominator;
     numerator = (numerator*b.denominator) -  (b.numerator*denominator);
     return this;
 }
 
-int main(){
+Fraction Fraction::mul(Fraction f) {
+    numerator = numerator * f.numerator;
+    denominator = denominator * f.denominator;
+
+    return f;
+}
+
+Fraction Fraction::div(Fraction b) {
+    denominator = denominator*b.numerator;
+    numerator = numerator*b.denominator;
+    return this;
+}
+
+int main() {
 
 }
