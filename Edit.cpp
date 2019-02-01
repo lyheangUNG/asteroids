@@ -14,5 +14,12 @@ public:
     Fraction div(Fraction);
 };
 
+Fraction::Fraction add(Fraction f)
+{
+	Fraction f1;
+	f1 = numerator * f.denominator + f.numerator * denominator;
+	return f1;
+}
+
 main(){
 }
